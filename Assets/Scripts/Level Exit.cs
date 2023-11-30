@@ -27,7 +27,8 @@ public class LevelExit : MonoBehaviour
     }
     IEnumerator EndLevelCo()
     {
-        yield return new WaitForSeconds(waittoendleve); 
+        yield return new WaitForSeconds(waittoendleve);
+        InfoTracker.instance.getInfor();
         SceneManager.LoadScene(nextlevel);
     }
 }

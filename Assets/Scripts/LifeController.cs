@@ -18,6 +18,7 @@ public class LifeController : MonoBehaviour
     void Start()
     {
         thePlayer = FindFirstObjectByType<PlayerController>();
+
         UpdateDisplay();
     }
 

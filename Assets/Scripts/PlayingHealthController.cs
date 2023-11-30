@@ -52,12 +52,14 @@ public class PlayingHealthController : MonoBehaviour
             currentHealth = 0;
                 //gameObject.SetActive(false);
                 LifeController.instance.Respawn();
+
         } else
             {
                 invincibiltyCounter = invincibiltyLength;
                 theSR.color = fadeColor;
                 thePlayer.KnockBack();
                 AudioManager.instance.PlaySFX(13);
+                UIController.instance.UpdateHealthDisplay(currentHealth);
             }
         UIController.instance.UpdateHealthDisplay(currentHealth);
     }

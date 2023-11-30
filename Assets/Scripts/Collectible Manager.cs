@@ -15,7 +15,8 @@ public class CollectibleManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        collectibleCount = InfoTracker.instance.currentFruits; 
+        UIController.instance.UpdateCollectibles(collectibleCount);
     }
 
     // Update is called once per frame
